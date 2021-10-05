@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #777;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+}
+
+.header {
+    height: 95vh;
+    background-image:linear-gradient(to bottom right, #a6935c77, #003d49a1)
+    , url('../img/pexels-h-emre-773471.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 100%);
+    position: relative;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-box h1 {
+    text-transform: uppercase;
+    color: rgb(193, 229, 240);
+}
+
+.heading-main {
+    display: block;
+    font-size: 5rem;
+    animation-name: moveInLeft;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.heading-sub {
+    display: block;
+    font-size: 2rem;
+    animation-name: moveInRight;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-30px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.row{
+    width: 85%;
+    margin: 10 rem auto;
+}
+
+.row:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.col-1-of-2{
+    float:left;
+    width: 50%;
+    padding: 1rem;
+}
+main h3{
+    font-size: 2rem;
+    text-transform:uppercase;
+}
+
+main p{
+    font-size: 1.5rem;
+}
+
+.btn-text{
+    font-size: 2rem;
+    color: white;
+    display: inline-block;
+    text-decoration:none;
+    border-bottom: 0.2rem solid white;
+    padding: 1rem;
+    margin-top: 5rem;
+    transition: all 0.3s;
+}
+
+.btn-text:hover{
+    background-color: tomato;
+    box-shadow:0 1rem 2rem rgb(182, 190, 192);
+    transform: translateY(-5px);
+}
+
+.btn-text:active{
+    box-shadow:0 0.5rem 1rem rgba(0,0,0,1.15);
+    transform: translateY(5px);
+}
+
+.gallery{
+    position:relative;
+}
+
+.gallery_photo{
+    width:55%;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.4);
+    position: absolute;
+    outline-offset: 1.5rem;
+    transform: all 0.3s;
+    z-index: 10;
+}
+
+.gallery_photo-1{
+    left: 1rem;
+    top: 2rem;
+}
+
+.gallery_photo-2{
+    right:0;
+    top: 10rem;
+}
+
+.gallery_photo-3{
+    left:11rem;
+    top:6rem;
+}
+
+.gallery_photo:hover{
+    outline:1.8rem solid #777;
+    transform: scale(1.10);
+    z-index:20;
+}
+
+.gallery:hover .gallery_photo:not(:hover){
+    transform: scale(0.95);
+    
+}
